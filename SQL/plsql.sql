@@ -1,0 +1,27 @@
+CREATE OR REPLACE TRIGGER TRG_VISCLI_CHECKEXISTS BEFORE
+    INSERT ON VISCLIVISITA REFERENCING OLD AS OLD NEW AS NEW 
+    FOR EACH ROW WHEN ((NVL(NEW.CNPJ, 'X') <> 'X')
+    AND (NVL(NEW.CODCLI, 0) = 0))
+DECLARE
+    VCODCLI NUMBER(6, 0);
+BEGIN
+    BEGIN
+        SELECT
+            CLI.CODCLI INTO VCODCLI
+        FROM
+            PCCLIENT@WINT CLI
+        WHERE
+            REGEXP_REPLACE(CLI.CGCENT,
+            '[^0-9]') = REGEXP_REPLACE(NVL(NEW.CNPJ,
+            'X'),
+            '[^0-9]',
+            '')
+            AND ROWNUM = 1;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            VCODCLI := 0;
+    END;
+    IF VCODCLI > 0 THEN
+        :NEW.CODCLI := VCODCLI;
+    END IF;
+END;

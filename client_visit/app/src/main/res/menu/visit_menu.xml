@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/vis_foto"
+        android:icon="@drawable/baseline_add_a_photo_24"
+        android:title="Tirar Foto"
+        app:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/vis_fin"
+        android:icon="@drawable/ic_check"
+        android:title="Novo"
+        app:showAsAction="ifRoom|withText"/>
+</menu>

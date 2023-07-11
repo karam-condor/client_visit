@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">client_visit</string>
+
+
+    <string name="login_invalid_user_pass_msg">Preenche usuário e senha</string>
+    <string name="search_appbar_title">Pesquisar um cliente</string>
+    <string name="client_confirm_start_visit_msg">Confirma que está na localização da loja do cliente, e pode registrar o inicio da visita</string>
+    <string name="confirm_logout_msg">Deseja realmente fazer logout?</string>
+    <string name="no_location_per_message">Para inciar uma nova visita, deverá garantir a permissção da localização</string>
+    <string name="no_cam_stor_per_message">Para tirar fotos precisa garantir a permissão da camera</string>
+    <string name="create_visit_error_message">Aconteceu um erro</string>
+    <string name="load_visit_error_message">Aconteceu um erro, não conseguiremos carregar informação da visita</string>
+    <string name="finalize_vist_conditions_msg">Favor! preencher os campos Email, Telefone, Representante e tirar pelo menos uma foto.</string>
+
+    <string name="sh_token">token</string>
+    <string name="sh_codusur">codusur</string>
+    <string name="sh_idvisita">id_visita</string>
+
+    <string name="per_location">Permite que o aplicativo capture a sua localização na iniciada da visita</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
